@@ -5,7 +5,7 @@ El usuario podrá crear un test con preguntas sobre sí mismo, incluyendo temas 
 
 Cuando una persona termine de responder, el programa comparará sus respuestas con las respuestas correctas proporcionadas por el usuario y calculará una calificación. Al finalizar, se mostrará el resultado para que la persona pueda saber qué tanto conoce al usuario.
 
-Me parece interesante porque es una idea que puede utilizarse de manera divertida entre amigos y familiares. Además, cada usuario tendría un test diferente, por lo que el contenido dependería de la persona que lo crea. El proyecto también puede crecer y agregar diferentes funciones, como guardar resultados, mostrar estadísticas y permitir compartir los tests.
+Me parece interesante porque es una idea que puede utilizarse de manera divertida entre amigos y familiares. Además, cada usuario tendría un test diferente, por lo que el contenido dependería de la persona que lo crea. A parte, pienso que es un proyecto no muy difícil de realizar para comenzar.
 
 # Algoritmo
 1. Iniciar el programa.
