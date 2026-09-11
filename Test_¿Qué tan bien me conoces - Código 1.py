@@ -1,7 +1,15 @@
+def calcular_calificacion(preguntas, correctas):
+    calificacion = (correctas / preguntas) * 100
+    return calificacion
+
+
+def mostrar_resultado(calificacion):
+    print("Tu calificación es:", calificacion, "%")
+
+
 preguntas = int(input("¿Cuántas preguntas tiene el test? "))
 correctas = int(input("¿Cuántas respuestas correctas obtuviste? "))
 
-calificacion = (correctas / preguntas) * 100
+calificacion = calcular_calificacion(preguntas, correctas)
 
-print("Tu calificación es:", calificacion, "%")
-
+mostrar_resultado(calificacion)
