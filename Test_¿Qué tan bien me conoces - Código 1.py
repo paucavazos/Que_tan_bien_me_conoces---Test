@@ -9,11 +9,11 @@ def mostrar_resultado(calificacion):
     if calificacion >= 90:
         print("¡Me conoces muchísimo!")
     elif calificacion >= 70:
-        print("¡Me conoces bastante!")
+        print("¡Me conoces bien!")
     elif calificacion >= 50:
         print("Me conoces más o menos.")
     else:
-        print("Tenemos que convivir más. 😭")
+        print("Tenemos que convivir más.")
 
 
 preguntas = int(input("¿Cuántas preguntas tiene el test? "))
