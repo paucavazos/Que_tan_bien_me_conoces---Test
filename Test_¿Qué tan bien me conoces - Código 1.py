@@ -1,4 +1,5 @@
 
+
 def calcular_calificacion(preguntas, correctas):
     calificacion = (correctas / preguntas) * 100
     return calificacion
@@ -18,20 +19,28 @@ def mostrar_resultado(calificacion):
 
 
 preguntas = int(input("¿Cuantas preguntas tiene el test? "))
+
+respuestas = []
+respuestas_correctas = []
+
+for numero in range(preguntas):
+    respuesta = input(
+        "Escribe tu respuesta a la pregunta "
+        + str(numero + 1) + ": "
+    )
+    respuestas.append(respuesta)
+
+    correcta = input(
+        "Ingresa la respuesta correcta de la pregunta "
+        + str(numero + 1) + ": "
+    )
+    respuestas_correctas.append(correcta)
+
 correctas = 0
 
 for numero in range(preguntas):
-    respuesta = input("Escribe la respuesta correcta de la pregunta " + str(numero + 1) + ": ")
-
-    respuesta_correcta = input("¿Cual era la respuesta correcta? ")
-
-    if respuesta.lower() == respuesta_correcta.lower():
+    if respuestas[numero].lower() == respuestas_correctas[numero].lower():
         correctas = correctas + 1
 
 calificacion = calcular_calificacion(preguntas, correctas)
-mostrar_resultado(calificacion)
-correctas = int(input("¿Cuántas respuestas correctas obtuviste? "))
-
-calificacion = calcular_calificacion(preguntas, correctas)
-
 mostrar_resultado(calificacion)
