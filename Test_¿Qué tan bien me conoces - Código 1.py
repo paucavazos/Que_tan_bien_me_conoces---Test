@@ -5,32 +5,37 @@ def calcular_calificacion(preguntas, correctas):
 
 
 def mostrar_resultado(calificacion):
-    print("Tu calificación es:", calificacion, "%")
+    print("\nTu calificacion es:", round(calificacion, 2), "%")
 
     if calificacion >= 90:
-        print("¡Me conoces muchísimo!")
+        print("¡Me conoces muchisimo!")
     elif calificacion >= 70:
         print("¡Me conoces bien!")
     elif calificacion >= 50:
         print("Me conoces más o menos.")
     else:
-        print("Tenemos que convivir mas.")
+        print("Tenemos que convivir más.")
 
 
-preguntas = int(input("¿Cuántas preguntas tiene el test? "))
+nombre = input("¿Como te llamas? ").strip().capitalize()
+
+print("\nBienvenido al test de", nombre)
+print("¡Vamos a descubrir que tanto te conocen!")
+
+preguntas = int(input("\n¿Cuantas preguntas tendra el test? "))
 test = []
 
 for numero in range(preguntas):
     pregunta = input(
-        "Escribe la pregunta " + str(numero + 1) + ": "
-    )
+        "\nEscribe la pregunta " + str(numero + 1) + ": "
+    ).strip()
 
-    opcion1 = input("Opcion A: ")
-    opcion2 = input("Opcion B: ")
-    opcion3 = input("Opcion C: ")
-    opcion4 = input("Opcion D: ")
+    opcion1 = input("Opcion A: ").strip()
+    opcion2 = input("Opcion B: ").strip()
+    opcion3 = input("Opcion C: ").strip()
+    opcion4 = input("Opcion D: ").strip()
 
-    correcta = input("Escribe la letra de la respuesta correcta: ")
+    correcta = input("Letra de la respuesta correcta: ").strip().upper()
 
     test.append([
         pregunta,
@@ -50,10 +55,15 @@ for numero in range(preguntas):
     print("C)", test[numero][3])
     print("D)", test[numero][4])
 
-    respuesta = input("Tu respuesta: ").upper()
+    respuesta = input("Tu respuesta: ").strip().upper()
 
-    if respuesta == test[numero][5].upper():
+    if respuesta == test[numero][5]:
         correctas = correctas + 1
 
 calificacion = calcular_calificacion(preguntas, correctas)
+
+print("\nResultados de", nombre)
+print("Respuestas correctas:", str(correctas) + " de " + str(preguntas))
+
 mostrar_resultado(calificacion)
+
