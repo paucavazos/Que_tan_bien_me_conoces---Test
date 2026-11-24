@@ -1,11 +1,10 @@
 # Contexto
-Este proyecto consiste en crear un test de preguntas para ver qué tanto conocen al usuario sus conocidos. El usuario manda el link a las personas que quiera, como familia o amigos, y ellos responden el test. Al final se despliega una calificación.
 
-El usuario podrá crear un test con preguntas sobre sí mismo, incluyendo temas como sus gustos, preferencias, personalidad y experiencias. Después podrá compartir un link con las personas que quiera para que respondan el test.
+Este proyecto consiste en crear un test de preguntas para evaluar qué tanto conocen al usuario sus familiares, amigos y conocidos. El usuario podrá diseñar su propio test con preguntas sobre sí mismo, incluyendo temas como sus gustos, preferencias, personalidad y experiencias. Posteriormente, otras personas podrán responderlo y, al finalizar, el programa mostrará una calificación basada en la cantidad de respuestas correctas.
 
-Cuando una persona termine de responder, el programa comparará sus respuestas con las respuestas correctas proporcionadas por el usuario y calculará una calificación. Al finalizar, se mostrará el resultado para que la persona pueda saber qué tanto conoce al usuario.
+Cuando una persona termine de responder, el programa comparará sus respuestas con las respuestas correctas previamente establecidas por el usuario y calculará su calificación. De esta manera, cada persona podrá descubrir qué tanto conoce a quien creó el test.
 
-Me parece interesante porque es una idea que puede utilizarse de manera divertida entre amigos y familiares. Además, cada usuario tendría un test diferente, por lo que el contenido dependería de la persona que lo crea. A parte, pienso que es un proyecto no muy difícil de realizar para comenzar.
+Considero que este proyecto es interesante porque puede utilizarse como una actividad divertida entre amigos y familiares, además de ayudar a fortalecer las relaciones interpersonales al conocer mejor los gustos y la personalidad de otras personas. Incluso, podría tener una utilidad en el ámbito laboral, ya que conocer mejor a los compañeros de trabajo puede favorecer la comunicación, la convivencia y la colaboración dentro de un equipo. Esto permitiría crear un ambiente de trabajo más agradable y facilitar la manera en que las personas se relacionan y trabajan juntas. Finalmente, considero que es un proyecto adecuado para poner en práctica mis conocimientos adquiridos de programación y desarrollar una herramienta interactiva que pueda tener diferentes aplicaciones.
 
 # Algoritmo
 1. Iniciar el programa.
