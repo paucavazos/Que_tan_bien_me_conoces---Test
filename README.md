@@ -11,10 +11,10 @@ Considero que este proyecto es interesante porque puede utilizarse como una acti
 1. Descarga Python si es que aún no lo tienes descargado.
 2. Descarga el código y los archivos de texto "test.txt" y "resultados.txt". No es necesario que los guardes en ninguna carpeta.
 3. Abre la terminal de tu computadora.
-4. Escribe: cd Downloads.
-5. Escribe: python "Test.py"
+4. Escribe: **cd Downloads.**
+5. Escribe: **python "Test.py"**
 6. Empieza a crear y/o responder tests, la información se guardará en los archivos "test.txt" y "resultados.txt".
-7. Para ver la información de los archivos de texto en la terminal, escribe: type test.txt y/o type resultados.txt.
+7. Para ver la información de los archivos de texto en la terminal, escribe: **type test.txt** y/o **type resultados.txt**.
 
 Además, se utilizará el módulo `os`, incorporado en Python mediante la instrucción `import os`. Este módulo permitirá comprobar si existe el archivo `test.txt` antes de intentar leerlo, evitando errores cuando todavía no se ha creado un test. Además, el programa utilizará archivos de texto para almacenar las preguntas y los resultados, los cuales se abrirán y cerrarán mediante las funciones correspondientes de Python.
 
