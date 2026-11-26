@@ -1,4 +1,7 @@
 
+import os
+
+
 def calcular_calificacion(preguntas, correctas):
     calificacion = (correctas / preguntas) * 100
     return calificacion
@@ -8,19 +11,28 @@ def mostrar_resultado(calificacion):
     print("\nTu calificacion es:", round(calificacion, 2), "%")
 
     if calificacion >= 90:
-        print("¡Me conoces muchísimo!")
+        print("¡Me conoces muchisimo!")
     elif calificacion >= 70:
         print("¡Me conoces bien!")
     elif calificacion >= 50:
         print("Me conoces más o menos.")
     else:
-        print("Tenemos que convivir más.")
+        print("Tenemos que convivir mas.")
 
 
 def crear_test():
-    nombre = input("¿Cómo te llamas? ").strip().capitalize()
+    nombre = input("¿Como te llamas? ").strip().capitalize()
 
-    preguntas = int(input("¿Cuántas preguntas tendrá el test? "))
+    try:
+        preguntas = int(input("¿Cuantas preguntas tendra el test? "))
+    except ValueError:
+        print("Debes escribir un numero entero.")
+        return
+
+    if preguntas <= 0:
+        print("El test debe tener al menos una pregunta.")
+        return
+
     test = []
 
     for numero in range(preguntas):
@@ -31,30 +43,61 @@ def crear_test():
         opcion2 = input("Opcion B: ").strip()
         opcion3 = input("Opcion C: ").strip()
         opcion4 = input("Opcion D: ").strip()
-        correcta = input("Letra de la respuesta correcta: ").strip().upper()
+
+        correcta = input(
+            "Letra de la respuesta correcta: "
+        ).strip().upper()
+
+        while correcta not in ["A", "B", "C", "D"]:
+            print("Selecciona A, B, C o D.")
+            correcta = input(
+                "Letra de la respuesta correcta: "
+            ).strip().upper()
 
         test.append([
             pregunta, opcion1, opcion2,
             opcion3, opcion4, correcta
         ])
 
-    with open("test.txt", "w") as archivo:
-        archivo.write(nombre + "\n")
-        archivo.write(str(preguntas) + "\n")
+    archivo = open("test.txt", "w")
 
-        for pregunta in test:
-            for dato in pregunta:
-                archivo.write(dato + "\n")
+    archivo.write(nombre + "\n")
+    archivo.write(str(preguntas) + "\n")
+
+    for pregunta in test:
+        for dato in pregunta:
+            archivo.write(dato + "\n")
+
+    archivo.close()
 
     print("\n¡Tu test se ha guardado correctamente!")
 
 
 def responder_test():
-    with open("test.txt", "w") as archivo:
-        datos = archivo.readlines()
+
+    if not os.path.exists("test.txt"):
+        print("\nNo existe ningun test. Primero debes crear uno.")
+        return
+
+    archivo = open("test.txt", "r")
+    datos = archivo.readlines()
+    archivo.close()
+
+    if len(datos) < 2:
+        print("\nEl archivo del test esta vacio o incompleto.")
+        return
+
+    try:
+        preguntas = int(datos[1].strip())
+    except ValueError:
+        print("\nEl archivo contiene datos incorrectos.")
+        return
+
+    if preguntas <= 0 or len(datos) != 2 + preguntas * 6:
+        print("\nEl archivo del test esta incompleto o tiene errores.")
+        return
 
     nombre = datos[0].strip()
-    preguntas = int(datos[1].strip())
     test = []
 
     for numero in range(preguntas):
@@ -66,7 +109,7 @@ def responder_test():
             datos[posicion + 2].strip(),
             datos[posicion + 3].strip(),
             datos[posicion + 4].strip(),
-            datos[posicion + 5].strip()
+            datos[posicion + 5].strip().upper()
         ])
 
     participante = input("\n¿Cuál es tu nombre? ").strip().capitalize()
@@ -83,6 +126,10 @@ def responder_test():
 
         respuesta = input("Tu respuesta: ").strip().upper()
 
+        while respuesta not in ["A", "B", "C", "D"]:
+            print("Selecciona A, B, C o D.")
+            respuesta = input("Tu respuesta: ").strip().upper()
+
         if respuesta == test[numero][5]:
             correctas = correctas + 1
 
@@ -93,21 +140,35 @@ def responder_test():
 
     mostrar_resultado(calificacion)
 
-    with open("resultados.txt", "w") as archivo:
-        archivo.write(participante + " - " + str(round(calificacion, 2)) + "%\n")
+    archivo = open("resultados.txt", "a")
+
+    archivo.write(
+        participante + " - "
+        + str(round(calificacion, 2)) + "%\n"
+    )
+
+    archivo.close()
 
     print("\nTu resultado se ha guardado correctamente.")
 
 
-print("¿QUÉ TANTO ME CONOCES?")
-print("\n1. Crear un test")
-print("2. Responder un test")
+while True:
+    print("\n¿QUÉ TANTO ME CONOCES?")
+    print("\n1. Crear un test")
+    print("2. Responder un test")
+    print("3. Salir")
 
-opcion = input("\nSelecciona una opción: ")
+    opcion = input("\nSelecciona una opción: ")
 
-if opcion == "1":
-    crear_test()
-elif opcion == "2":
-    responder_test()
-else:
-    print("Opción no válida.")
+    if opcion == "1":
+        crear_test()
+
+    elif opcion == "2":
+        responder_test()
+
+    elif opcion == "3":
+        print("\n¡Gracias por utilizar el programa!")
+        break
+
+    else:
+        print("\nOpción no valida. Intenta nuevamente.")
