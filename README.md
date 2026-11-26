@@ -4,13 +4,13 @@ Este proyecto consiste en crear un test de preguntas para evaluar qué tanto con
 
 Cuando una persona termine de responder, el programa comparará sus respuestas con las respuestas correctas previamente establecidas por el usuario y calculará su calificación. De esta manera, cada persona podrá descubrir qué tanto conoce a quien creó el test.
 
+Considero que este proyecto es interesante porque puede utilizarse como una actividad divertida entre amigos y familiares, además de ayudar a fortalecer las relaciones interpersonales al conocer mejor los gustos y la personalidad de otras personas. Incluso, podría tener una utilidad en el ámbito laboral, ya que conocer mejor a los compañeros de trabajo puede favorecer la comunicación, la convivencia y la colaboración dentro de un equipo. Esto permitiría crear un ambiente de trabajo más agradable y facilitar la manera en que las personas se relacionan y trabajan juntas. Finalmente, considero que es un proyecto adecuado para poner en práctica mis conocimientos adquiridos de programación y desarrollar una herramienta interactiva que pueda tener diferentes aplicaciones.
+
 ### Ejecución e importación de módulos
 
 El programa será desarrollado en Python y se ejecutará mediante su intérprete, por lo que no requiere un proceso de compilación manual. Para ejecutarlo, será necesario **abrir** el **archivo principal desde un entorno de programación o** utilizar la **terminal** con el comando `Código proyecto.py`.
 
 Se utilizará el módulo `os`, incorporado en Python mediante la instrucción `import os`. Este módulo permitirá comprobar si existe el archivo `test.txt` antes de intentar leerlo, evitando errores cuando todavía no se ha creado un test. Además, el programa utilizará archivos de texto para almacenar las preguntas y los resultados, los cuales se abrirán y cerrarán mediante las funciones correspondientes de Python.
-
-Considero que este proyecto es interesante porque puede utilizarse como una actividad divertida entre amigos y familiares, además de ayudar a fortalecer las relaciones interpersonales al conocer mejor los gustos y la personalidad de otras personas. Incluso, podría tener una utilidad en el ámbito laboral, ya que conocer mejor a los compañeros de trabajo puede favorecer la comunicación, la convivencia y la colaboración dentro de un equipo. Esto permitiría crear un ambiente de trabajo más agradable y facilitar la manera en que las personas se relacionan y trabajan juntas. Finalmente, considero que es un proyecto adecuado para poner en práctica mis conocimientos adquiridos de programación y desarrollar una herramienta interactiva que pueda tener diferentes aplicaciones.
 
 # Algoritmo
 1. Iniciar el programa.
