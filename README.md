@@ -8,6 +8,7 @@ Considero que este proyecto es interesante porque puede utilizarse como una acti
 
 # ¿Cómo ejecutar el programa?
 
+El programa puede ejecutarse desde un editor de código (Python, Visual Code Studio, Thonny) o desde la **terminal de la computadora:**
 1. Descarga Python si es que aún no lo tienes descargado.
 2. Descarga el código y los archivos de texto "test.txt" y "resultados.txt". No es necesario que los guardes en ninguna carpeta.
 3. Abre la terminal de tu computadora.
