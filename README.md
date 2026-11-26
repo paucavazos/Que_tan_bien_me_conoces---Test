@@ -6,11 +6,17 @@ Cuando una persona termine de responder, el programa comparará sus respuestas c
 
 Considero que este proyecto es interesante porque puede utilizarse como una actividad divertida entre amigos y familiares, además de ayudar a fortalecer las relaciones interpersonales al conocer mejor los gustos y la personalidad de otras personas. Incluso, podría tener una utilidad en el ámbito laboral, ya que conocer mejor a los compañeros de trabajo puede favorecer la comunicación, la convivencia y la colaboración dentro de un equipo. Esto permitiría crear un ambiente de trabajo más agradable y facilitar la manera en que las personas se relacionan y trabajan juntas. Finalmente, considero que es un proyecto adecuado para poner en práctica mis conocimientos adquiridos de programación y desarrollar una herramienta interactiva que pueda tener diferentes aplicaciones.
 
-### Ejecución e importación de módulos
+# ¿Cómo ejecutar el programa?
 
-El programa será desarrollado en Python y se ejecutará mediante su intérprete, por lo que no requiere un proceso de compilación manual. Para ejecutarlo, será necesario **abrir** el **archivo principal desde un entorno de programación o** utilizar la **terminal** con el comando `Código proyecto.py`.
+1. Descarga Python si es que aún no lo tienes descargado.
+2. Descarga el código y los archivos de texto "test.txt" y "resultados.txt". No es necesario que los guardes en ninguna carpeta.
+3. Abre la terminal de tu computadora.
+4. Escribe: cd Downloads.
+5. Escribe: python "Test.py"
+6. Empieza a crear y/o responder tests, la información se guardará en los archivos "test.txt" y "resultados.txt".
+7. Para ver la información de los archivos de texto en la terminal, escribe: type test.txt y/o type resultados.txt.
 
-Se utilizará el módulo `os`, incorporado en Python mediante la instrucción `import os`. Este módulo permitirá comprobar si existe el archivo `test.txt` antes de intentar leerlo, evitando errores cuando todavía no se ha creado un test. Además, el programa utilizará archivos de texto para almacenar las preguntas y los resultados, los cuales se abrirán y cerrarán mediante las funciones correspondientes de Python.
+Además, se utilizará el módulo `os`, incorporado en Python mediante la instrucción `import os`. Este módulo permitirá comprobar si existe el archivo `test.txt` antes de intentar leerlo, evitando errores cuando todavía no se ha creado un test. Además, el programa utilizará archivos de texto para almacenar las preguntas y los resultados, los cuales se abrirán y cerrarán mediante las funciones correspondientes de Python.
 
 # Algoritmo
 1. Iniciar el programa.
