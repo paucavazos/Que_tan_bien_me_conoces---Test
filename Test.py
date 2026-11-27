@@ -1,6 +1,11 @@
 
 import os
 
+carpeta = os.path.dirname(os.path.abspath(__file__))
+
+ruta_test = os.path.join(carpeta, "test.txt")
+ruta_resultados = os.path.join(carpeta, "resultados.txt")
+
 
 def calcular_calificacion(preguntas, correctas):
     calificacion = (correctas / preguntas) * 100
@@ -59,7 +64,7 @@ def crear_test():
             opcion3, opcion4, correcta
         ])
 
-    archivo = open("test.txt", "w")
+    archivo = open(ruta_test, "w")
 
     archivo.write(nombre + "\n")
     archivo.write(str(preguntas) + "\n")
@@ -75,16 +80,16 @@ def crear_test():
 
 def responder_test():
 
-    if not os.path.exists("test.txt"):
-        print("\nNo existe ningun test. Primero debes crear uno.")
+    if not os.path.exists(ruta_test):
+        print("\nNo existe ningún test. Primero debes crear uno.")
         return
 
-    archivo = open("test.txt", "r")
+    archivo = open(ruta_test, "r")
     datos = archivo.readlines()
     archivo.close()
 
     if len(datos) < 2:
-        print("\nEl archivo del test esta vacio o incompleto.")
+        print("\nEl archivo del test esta vacío o incompleto.")
         return
 
     try:
@@ -94,7 +99,7 @@ def responder_test():
         return
 
     if preguntas <= 0 or len(datos) != 2 + preguntas * 6:
-        print("\nEl archivo del test esta incompleto o tiene errores.")
+        print("\nEl archivo del test está incompleto o tiene errores.")
         return
 
     nombre = datos[0].strip()
@@ -140,7 +145,7 @@ def responder_test():
 
     mostrar_resultado(calificacion)
 
-    archivo = open("resultados.txt", "a")
+    archivo = open(ruta_resultados, "a")
 
     archivo.write(
         participante + " - "
