@@ -52,7 +52,11 @@ Además, se utilizará el módulo `os`, incorporado en Python mediante la instru
 
 # Referencias
 Python Software Foundation (n.d.). Os.path — Common pathname manipulations. [online] Python documentation. Available at: https://docs.python.org/3/library/os.path.html
+
 GeeksforGeeks (2019). Os.path.Abspath() method python. [online] GeeksforGeeks. Available at: https://www.geeksforgeeks.org/python/python-os-path-abspath-method-with-example/
+
 GeeksforGeeks (2019). Python | os.path.Dirname() method. [online] GeeksforGeeks. Available at: https://www.geeksforgeeks.org/python/python-os-path-dirname-method/
+
 GeeksforGeeks (2019). Python | os.path.Join() method. [online] GeeksforGeeks. Available at: https://www.geeksforgeeks.org/python/python-os-path-join-method/
+
 freeCodeCamp.org. (2022). Sentencias try y except de python: Cómo manejar excepciones en python. [online] Available at: https://www.freecodecamp.org/espanol/news/sentencias-try-y-except-de-python-como-menejar-excepciones-en-python/
