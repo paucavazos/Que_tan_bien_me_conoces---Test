@@ -17,7 +17,9 @@ El programa puede ejecutarse desde un editor de código (Python, Visual Code Stu
 6. Empieza a crear y/o responder tests, la información se guardará en los archivos "test.txt" y "resultados.txt".
 7. Para ver la información de los archivos de texto en la terminal, escribe: **type test.txt** y/o **type resultados.txt**.
 
-Además, se utilizará el módulo `os`, incorporado en Python mediante la instrucción `import os`. Este módulo permitirá comprobar si existe el archivo `test.txt` antes de intentar leerlo, evitando errores cuando todavía no se ha creado un test. Además, el programa utilizará archivos de texto para almacenar las preguntas y los resultados, los cuales se abrirán y cerrarán mediante las funciones correspondientes de Python.
+Además, se utilizará el módulo `os`, incorporado en Python mediante la instrucción `import os`. Este módulo permitirá comprobar si existe el archivo `test.txt` antes de intentar leerlo, evitando errores cuando todavía no se ha creado un test. También, el programa utilizará archivos de texto para almacenar las preguntas y los resultados, los cuales se abrirán y cerrarán mediante las funciones correspondientes de Python.
+
+**NOTA: Para que el programa funcione correctamente, el  archivo de código "Test.py" y los archivos de texto "test.txt" y "resultados.txt" deben estar en la misma carpeta. Lo que hacen las funciones seleccionadas de la biblioteca 'os' es identificar dónde está guardado "Test.py", así, en caso de que el usuario llegue a cambiar de carpeta alguno(s) de estos 3 archivos, al momento de correr el programa y guardar la información en los archivos de texto, automáticamente "aparece(n)" el (los) otro(s) ahí mismo. Es decir, no puedes seperar este trío de archivos.**
 
 # Algoritmo
 1. Iniciar el programa.
@@ -47,3 +49,10 @@ Además, se utilizará el módulo `os`, incorporado en Python mediante la instru
 5. Permitir que el creador del test consulte los resultados obtenidos por las personas que lo han contestado.
 6. Mostrar los nombres de los participantes y sus respectivas calificaciones.
 7. Finalizar el programa.
+
+# Referencias
+Python Software Foundation (n.d.). Os.path — Common pathname manipulations. [online] Python documentation. Available at: https://docs.python.org/3/library/os.path.html
+GeeksforGeeks (2019). Os.path.Abspath() method python. [online] GeeksforGeeks. Available at: https://www.geeksforgeeks.org/python/python-os-path-abspath-method-with-example/
+GeeksforGeeks (2019). Python | os.path.Dirname() method. [online] GeeksforGeeks. Available at: https://www.geeksforgeeks.org/python/python-os-path-dirname-method/
+GeeksforGeeks (2019). Python | os.path.Join() method. [online] GeeksforGeeks. Available at: https://www.geeksforgeeks.org/python/python-os-path-join-method/
+freeCodeCamp.org. (2022). Sentencias try y except de python: Cómo manejar excepciones en python. [online] Available at: https://www.freecodecamp.org/espanol/news/sentencias-try-y-except-de-python-como-menejar-excepciones-en-python/
